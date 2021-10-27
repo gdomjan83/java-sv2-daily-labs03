@@ -26,7 +26,7 @@ public class GuessTheNumber {
     public String makeGuess(int guess) {
         if (guess == secretNumber) {
             gameWon = true;
-            return "Igen, ez volt az.";
+            return "Igen, ez volt az. Gratulálok!";
         } else if (guess < secretNumber) {
             return "Nem, a gondolt szám nagyobb.";
         } else {
