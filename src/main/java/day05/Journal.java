@@ -8,12 +8,13 @@ public class Journal {
     private List<String> students = new ArrayList<>();
 
     public boolean addStudent(String name) {
-        boolean firstNamePresent = false;
-        boolean lastNamePresent = false;
+       // boolean firstNamePresent = false; //Csak az alsó részletes kódhoz kellene ez.
+        //boolean lastNamePresent = false;
         String trimmedName = name.trim();
         int whiteSpaceIndex = trimmedName.indexOf(" ");
 
         if (whiteSpaceIndex > -1) {
+            students.add(trimmedName);
             return true;
         } else {
             return false;
@@ -47,5 +48,6 @@ public class Journal {
         String name = sc.nextLine();
 
         System.out.println(journal.addStudent(name) ? "Név rögzítve" : "A teljes neved meg kell adnod!");
+        System.out.println(journal.students.toString());
     }
 }
